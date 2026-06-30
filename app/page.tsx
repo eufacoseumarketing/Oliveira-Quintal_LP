@@ -19,15 +19,16 @@ import {
 } from "lucide-react";
 
 // ── WhatsApp links ─────────────────────────────────────────────────────────
-const WA_BASE = "https://wa.me/5511926823330?text=";
+const WA_BASE = "https://api.whatsapp.com/send?phone=5511926823330&text=";
+const SOURCE_URL = "&source_url=https://terezinhaquintal.adv.br";
 const WA_MAIN = `${WA_BASE}${encodeURIComponent(
   "Olá, vim pelo site e gostaria de agendar um atendimento especializado.%0A%0AFonte: CTA"
-)}`;
+)}${SOURCE_URL}`;
 const WA_FLOAT = `${WA_BASE}${encodeURIComponent(
   "Olá, vim pelo site e gostaria de agendar um atendimento especializado.%0A%0AFonte: Flutuante"
-)}`;
+)}${SOURCE_URL}`;
 function wa(msg: string) {
-  return `${WA_BASE}${encodeURIComponent(msg)}`;
+  return `${WA_BASE}${encodeURIComponent(msg)}${SOURCE_URL}`;
 }
 
 // ── Button styles ──────────────────────────────────────────────────────────
