@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 // ── WhatsApp links ─────────────────────────────────────────────────────────
-const WA_BASE = "https://wa.me/551122364852?text=";
+const WA_BASE = "https://wa.me/5511926823330?text=";
 const WA_MAIN = `${WA_BASE}${encodeURIComponent(
   "Olá, vim pelo site e gostaria de agendar um atendimento especializado."
 )}`;
