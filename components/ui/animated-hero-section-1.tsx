@@ -15,11 +15,13 @@ interface AnimatedHeroProps {
   description: string;
   ctaButton: {
     text: string;
-    onClick: () => void;
+    onClick?: () => void;
+    href?: string;
   };
   secondaryCta?: {
     text: string;
-    onClick: () => void;
+    onClick?: () => void;
+    href?: string;
   };
   stats?: HeroStat[];
   className?: string;
@@ -124,14 +126,34 @@ export const AnimatedHero = ({
           variants={itemVariants}
           className="mt-9 flex flex-wrap gap-3 justify-center sm:justify-start"
         >
-          <button
-            type="button"
-            onClick={ctaButton.onClick}
-            className="bg-[#bb2017] text-white font-bold text-[11px] uppercase tracking-widest px-8 py-4 hover:bg-[#741b16] transition-colors"
-          >
-            {ctaButton.text}
-          </button>
-          {secondaryCta && (
+          {ctaButton.href ? (
+            <a
+              href={ctaButton.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#bb2017] text-white font-bold text-[11px] uppercase tracking-widest px-8 py-4 hover:bg-[#741b16] transition-colors inline-block"
+            >
+              {ctaButton.text}
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={ctaButton.onClick}
+              className="bg-[#bb2017] text-white font-bold text-[11px] uppercase tracking-widest px-8 py-4 hover:bg-[#741b16] transition-colors"
+            >
+              {ctaButton.text}
+            </button>
+          )}
+          {secondaryCta && (secondaryCta.href ? (
+            <a
+              href={secondaryCta.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-[#741b16] text-[#741b16] font-bold text-[11px] uppercase tracking-widest px-8 py-4 hover:bg-[#741b16] hover:text-white transition-colors inline-block"
+            >
+              {secondaryCta.text}
+            </a>
+          ) : (
             <button
               type="button"
               onClick={secondaryCta.onClick}
@@ -139,7 +161,7 @@ export const AnimatedHero = ({
             >
               {secondaryCta.text}
             </button>
-          )}
+          ))}
         </motion.div>
       </motion.div>
 

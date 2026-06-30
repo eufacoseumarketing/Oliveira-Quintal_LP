@@ -112,13 +112,14 @@ function CardLight({ icon, tag, title, body, cta, msg, hideCta }: CardProps) {
       </div>
       <p className="text-[13px] font-normal leading-relaxed text-[#9d9695] flex-1">{body}</p>
       {!hideCta && (
-        <button
-          type="button"
+        <a
+          href={wa(msg)}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`${WINE} self-start text-[9.5px]`}
-          onClick={() => window.open(wa(msg), "_blank")}
         >
           {cta}
-        </button>
+        </a>
       )}
     </motion.div>
   );
@@ -351,7 +352,7 @@ export default function Page() {
           description="Você não precisa carregar o peso de uma transição complexa sem um amparo jurídico de alto nível. Com mais de 20 anos de experiência, atuamos com precisão técnica e maestria estratégica para blindar o seu patrimônio e resguardar os seus direitos."
           ctaButton={{
             text: "Agendar Atendimento",
-            onClick: () => window.open(WA_MAIN, "_blank"),
+            href: WA_MAIN,
           }}
           stats={[
             { value: "20+", label: "Anos de Experiência" },
@@ -444,18 +445,14 @@ export default function Page() {
                 </motion.div>
 
                 <motion.div variants={fadeItem} className="mt-7 flex justify-center sm:justify-start">
-                  <button
-                    type="button"
+                  <a
+                    href={WA_MAIN}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={WINE}
-                    onClick={() =>
-                      window.open(
-                        WA_MAIN,
-                        "_blank"
-                      )
-                    }
                   >
                     Quero Proteger Meu Patrimônio →
-                  </button>
+                  </a>
                 </motion.div>
               </motion.div>
 
@@ -502,13 +499,14 @@ export default function Page() {
 
           <div className="max-w-6xl mx-auto px-6 md:px-12">
             <motion.div {...fadeUp} className="flex justify-center">
-              <button
-                type="button"
+              <a
+                href={WA_MAIN}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={WINE}
-                onClick={() => window.open(WA_MAIN, "_blank")}
               >
                 Agendar Atendimento Especializado →
-              </button>
+              </a>
             </motion.div>
           </div>
         </section>
@@ -658,18 +656,14 @@ export default function Page() {
                 </motion.blockquote>
 
                 <motion.div {...fadeUp} className="mt-9 flex justify-center sm:justify-start">
-                  <button
-                    type="button"
+                  <a
+                    href={WA_MAIN}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={WINE}
-                    onClick={() =>
-                      window.open(
-                        WA_MAIN,
-                        "_blank"
-                      )
-                    }
                   >
                     Falar com a Dra. Terezinha →
-                  </button>
+                  </a>
                 </motion.div>
               </div>
 
@@ -696,18 +690,14 @@ export default function Page() {
                   Entender os passos do processo retira a angústia do desconhecido. Veja os esclarecimentos para as principais preocupações que chegam ao nosso escritório.
                 </motion.p>
                 <motion.div {...fadeUp} className="mt-9 flex justify-center sm:justify-start">
-                  <button
-                    type="button"
+                  <a
+                    href={WA_MAIN}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={WINE}
-                    onClick={() =>
-                      window.open(
-                        WA_MAIN,
-                        "_blank"
-                      )
-                    }
                   >
                     Tirar Minha Dúvida Agora →
-                  </button>
+                  </a>
                 </motion.div>
               </div>
 
@@ -757,14 +747,15 @@ export default function Page() {
             </motion.p>
 
             <motion.div {...fadeUp} className="mt-12 flex flex-col items-center gap-4">
-              <button
-                type="button"
+              <a
+                href={WA_MAIN}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`${SOLID} flex items-center gap-3 px-10 py-5 text-[10.5px]`}
-                onClick={() => window.open(WA_MAIN, "_blank")}
               >
                 <MessageCircle size={17} />
                 Agendar Atendimento
-              </button>
+              </a>
               <p className="text-[12.5px] font-bold text-white tracking-wide">
                 Atendimento sigiloso · Segunda a Sexta, 08h às 18h
               </p>
