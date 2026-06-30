@@ -14,7 +14,7 @@ const navLinks = [
 const WA =
   "https://wa.me/5511926823330?text=" +
   encodeURIComponent(
-    "Olá, vim pelo site e gostaria de agendar um atendimento."
+    "Olá, vim pelo site e gostaria de agendar um atendimento especializado.%0A%0AFonte: Header"
   );
 
 export function SiteHeader() {

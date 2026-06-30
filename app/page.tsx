@@ -21,10 +21,10 @@ import {
 // ── WhatsApp links ─────────────────────────────────────────────────────────
 const WA_BASE = "https://wa.me/5511926823330?text=";
 const WA_MAIN = `${WA_BASE}${encodeURIComponent(
-  "Olá, vim pelo site e gostaria de agendar um atendimento especializado."
+  "Olá, vim pelo site e gostaria de agendar um atendimento especializado.%0A%0AFonte: CTA"
 )}`;
 const WA_FLOAT = `${WA_BASE}${encodeURIComponent(
-  "Olá, vim pelo site e gostaria de agendar um atendimento especializado."
+  "Olá, vim pelo site e gostaria de agendar um atendimento especializado.%0A%0AFonte: Flutuante"
 )}`;
 function wa(msg: string) {
   return `${WA_BASE}${encodeURIComponent(msg)}`;
