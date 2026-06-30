@@ -20,29 +20,8 @@ export const metadata: Metadata = {
   title: "Oliveira Quintal Advocacia | Direito de Família e Sucessões · São Paulo",
   description:
     "Proteção patrimonial e jurídica com mais de 20 anos de experiência em Direito de Família e Sucessões em São Paulo.",
-  openGraph: {
-    title: "Oliveira Quintal Advocacia | Direito de Família e Sucessões",
-    description:
-      "Proteção patrimonial e jurídica com mais de 20 anos de experiência em Direito de Família e Sucessões em São Paulo.",
-    url: "https://terezinhaquintal.adv.br",
-    siteName: "Oliveira Quintal Advocacia",
-    images: [
-      {
-        url: "https://terezinhaquintal.adv.br/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Oliveira Quintal Advocacia",
-      },
-    ],
-    locale: "pt_BR",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Oliveira Quintal Advocacia | Direito de Família e Sucessões",
-    description:
-      "Proteção patrimonial e jurídica com mais de 20 anos de experiência em Direito de Família e Sucessões em São Paulo.",
-    images: ["https://terezinhaquintal.adv.br/og-image.png"],
+  icons: {
+    icon: "/favicon.png",
   },
 };
 
