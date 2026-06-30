@@ -12,7 +12,7 @@ const navLinks = [
 ];
 
 const WA =
-  "https://wa.me/5511000000000?text=" +
+  "https://wa.me/551122364852?text=" +
   encodeURIComponent(
     "Olá, vim pelo site e gostaria de agendar um atendimento."
   );
